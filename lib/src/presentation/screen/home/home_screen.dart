@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:vetter_app/src/presentation/theme/theme_provider.dart';
 import 'package:vetter_app/src/widgets/button_app.dart';
@@ -32,8 +33,8 @@ class HomeScreen extends ConsumerWidget {
                 _textApp(),
                 _textInfo(stateDarkmode),
                 _imageHome(size),
-                _buttonLogin(),
-                _buttonRegister()
+                _buttonLogin(context),
+                _buttonRegister(context)
               ],
             ),
           ),
@@ -121,20 +122,24 @@ Widget _textWelcom() {
   );
 }
 
-Widget _buttonLogin() {
+Widget _buttonLogin(BuildContext context) {
   return ButtonApp(
     color: Colors.deepPurpleAccent,
     colorTexto: Colors.white,
     texto: 'Iniciar Sesión',
-    onPressed: () {},
+    onPressed: () {
+      context.push('/login');
+    },
   );
 }
 
-Widget _buttonRegister() {
+Widget _buttonRegister(BuildContext context) {
   return ButtonApp(
     color: Colors.yellowAccent.shade700,
     colorTexto: Colors.black54,
     texto: 'Registrate',
-    onPressed: () {},
+    onPressed: () {
+      context.push('/register');
+    },
   );
 }
