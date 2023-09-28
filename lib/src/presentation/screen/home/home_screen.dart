@@ -20,8 +20,14 @@ class HomeScreen extends ConsumerWidget {
                 ref.read(themeNotifierProvider.notifier).toogleDarkmode();
               },
               icon: stateDarkmode
-                  ? const Icon(Icons.light_mode_outlined)
-                  : const Icon(Icons.dark_mode_outlined),
+                  ? const Icon(
+                      Icons.light_mode_outlined,
+                      color: Colors.deepPurpleAccent,
+                    )
+                  : const Icon(
+                      Icons.dark_mode_outlined,
+                      color: Colors.deepPurpleAccent,
+                    ),
             ),
           ],
         ),

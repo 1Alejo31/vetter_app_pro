@@ -15,7 +15,7 @@ const colorList = <Color>[
 class AppTheme {
   final int selectColor;
   final bool isDarkmode;
-  AppTheme({this.isDarkmode = false, this.selectColor = 0})
+  AppTheme({this.isDarkmode = false, this.selectColor = 5})
       : assert(selectColor >= 0, 'Selected color must be greater then 0'),
         assert(selectColor < colorList.length,
             'Selected color must be lees or equal than ${colorList.length - 1}');
