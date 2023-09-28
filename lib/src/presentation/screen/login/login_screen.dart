@@ -70,7 +70,7 @@ Widget _textFieldPassword(stateDarkmode) {
       hintText: '123456789',
       border: const OutlineInputBorder(),
       prefixIcon: Icon(
-        Icons.person,
+        Icons.enhanced_encryption_outlined,
         color: stateDarkmode
             ? const Color.fromARGB(255, 125, 82, 243)
             : const Color.fromARGB(255, 91, 70, 143),
